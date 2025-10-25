@@ -90,11 +90,17 @@ It will exit this trade if *any* of the following is true:
 Arguments
 Flag	Required	Type	Example	Default	Description
 --symbol	✅	str	BTCUSDT	—	Trading pair. Must end with the quote asset (e.g., USDT).
+
 --period_start	✅	str (YYYY-MM-DD HH:MM:SS)	"2025-10-24 00:00:00"	—	Inclusive start timestamp for the test window.
+
 --period_end	✅	str (YYYY-MM-DD HH:MM:SS)	"2025-10-25 00:00:00"	—	Exclusive end timestamp for the test window.
+
 --interval	✅	enum	1h, 30m, 15m, 5m	—	Candlestick interval.
+
 --lookback	❌	int	400	400	Number of candles fetched before period_start to warm up indicators (prevents look-ahead bias).
+
 --fee_bps	❌	int	10	10	Per-side taker fee in basis points. 10 = 0.10% on entry and 0.10% on exit (market orders).
+
 --no-close-on-end	❌	flag	--no-close-on-end	(off)	By default, any open trade is force-closed at the final candle; pass this flag to leave it open.
 
 
